@@ -2,7 +2,7 @@
 layout: about
 title: CAMER
 permalink: /
-subtitle: Communication, AI, Morality, and Effects Research Group (UW–Madison)
+subtitle: Communication, AI, Morality, and Effects Research Group
 
 profile:
   align: right
@@ -31,7 +31,7 @@ latest_posts:
 
 CAMER studies **moralization as a communicative process** and **how persuasion operates in contemporary, algorithmically mediated information environments**, translating insights from both lines of work into **real-world communication interventions** that address public-interest challenges such as **public health, climate change, and misinformation**.
 
-## Research pillars
+## Research Areas
 
 ### Communication of Morality
 This line of research examines how morality is expressed, negotiated, and transmitted through communication across hybrid media environments. It develops computational tools to track moral appeals, experimentally test their effects, and advances theory on when, why, and for whom attitudes become moralized, as well as how moralization shapes persuasion, policy support, and public discourse.
