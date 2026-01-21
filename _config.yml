@@ -2,14 +2,14 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: "CAMER (Computational Approaches and Message Effects Research)"
+title: CAMER 
 first_name: Sijia
 middle_name:
 last_name: Yang
 contact_note: "Email: sijia.yang@wisc.edu"
-description: 
+description: Communication, AI, Morality, and Effects Research Group (School of Journalism and Mass Communication, UW–Madison)
 footer_text: Hosted by GitHub Pages
-keywords: computational communication science, message effects, persuasion, attitude moralization, persuasive AI, public health
+keywords: computational communication science, message effects, persuasion, moralization, persuasive AI, public health
 lang: en
 icon: ⚛️
 
