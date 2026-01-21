@@ -9,7 +9,7 @@ profile:
   image: camer-placeholder.png
   image_circular: false
   more_info: >
-    <p><strong>Director:</strong> Sijia Yang</p>
+    <p><strong>Director:</strong> Sijia Yang (PhD)</p>
     <p>School of Journalism & Mass Communication</p>
     <p>University of Wisconsin–Madison</p>
 
