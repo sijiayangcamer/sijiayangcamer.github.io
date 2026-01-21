@@ -27,7 +27,7 @@ latest_posts:
   limit: 3
 ---
 
-## What we do
+## What We Do
 
 CAMER studies **moralization as a communicative process** and **how persuasion operates in contemporary, algorithmically mediated information environments**, translating insights from both lines of work into **real-world communication interventions** that address public-interest challenges such as **public health, climate change, and misinformation**.
 
