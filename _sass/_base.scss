@@ -816,6 +816,7 @@ footer.sticky-bottom {
           padding-top: 0.25rem;
           padding-bottom: 0.25rem;
           margin-left: 0;
+          text-transform: none;
 
           &:hover {
             color: var(--global-theme-color);
@@ -1525,4 +1526,664 @@ figure.cover {
 
 mjx-container[jax="CHTML"][display="true"] {
   overflow-x: auto;
+}
+
+/*******************************************************************************
+ * Homepage Layout Styles
+ ******************************************************************************/
+
+// News Timeline
+.news-section {
+  .news-timeline {
+    position: relative;
+    padding-left: 30px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 8px;
+      top: 8px;
+      bottom: 8px;
+      width: 2px;
+      background: var(--global-divider-color);
+    }
+
+    .news-item {
+      position: relative;
+      margin-bottom: 1.5rem;
+
+      .news-dot {
+        position: absolute;
+        left: -26px;
+        top: 6px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--global-theme-color);
+        border: 2px solid var(--global-bg-color);
+        box-shadow: 0 0 0 2px var(--global-theme-color);
+      }
+
+      .news-content {
+        .news-date {
+          font-size: 0.85rem;
+          font-weight: 600;
+          color: var(--global-theme-color);
+          margin-bottom: 0.25rem;
+        }
+
+        .news-text {
+          font-size: 0.9rem;
+          line-height: 1.5;
+          color: var(--global-text-color);
+        }
+      }
+    }
+  }
+}
+
+// Recent Publications (Compact)
+.recent-publications {
+  .publications-list {
+    // Remove year headings
+    h2.bibliography {
+      display: none;
+    }
+
+    ol.bibliography {
+      padding-left: 0;
+      list-style: none;
+      margin-bottom: 0;
+
+      li {
+        margin-bottom: 0;
+      }
+    }
+
+    .compact-bib-entry {
+      padding-bottom: 0.75rem;
+      margin-bottom: 0.75rem;
+      border-bottom: 1px solid var(--global-divider-color);
+
+      &:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      .pub-dot {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--global-theme-color);
+        margin-top: 6px;
+      }
+
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.25rem;
+
+        a.btn {
+          color: var(--global-text-color);
+          border: 1px solid var(--global-text-color);
+          padding: 0.25rem 0.5rem;
+          font-size: 0.75rem;
+          text-transform: none;
+          background-color: transparent;
+
+          &:hover {
+            color: var(--global-theme-color);
+            border-color: var(--global-theme-color);
+          }
+        }
+      }
+    }
+  }
+
+  .see-all-link {
+    display: inline-block;
+    color: var(--global-theme-color);
+    font-weight: 500;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// Homepage Content
+.home-content {
+  h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    position: relative;
+
+    .research-area-links {
+      font-size: 0.75rem;
+      font-weight: 400;
+      margin-left: 0.75rem;
+      white-space: nowrap;
+
+      .research-link {
+        color: var(--global-theme-color);
+        text-decoration: none;
+        padding: 0.2rem 0.5rem;
+        border: 1px solid var(--global-theme-color);
+        border-radius: 3px;
+        transition: all 0.2s ease;
+        display: inline-block;
+
+        &:hover {
+          background-color: var(--global-theme-color);
+          color: var(--global-bg-color);
+          text-decoration: none;
+        }
+      }
+
+      .link-sep {
+        color: var(--global-text-color-light);
+        margin: 0 0.25rem;
+        font-size: 0.7rem;
+      }
+    }
+  }
+
+  p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 991px) {
+  .recent-publications {
+    margin-top: 3rem;
+  }
+}
+
+// CV Sidebar Profile Image
+.cv-sidebar-profile {
+  .cv-profile-img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    object-position: 65% 30%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 3px solid var(--global-bg-color);
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  // Social links under profile picture
+  .cv-social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+
+    a {
+      color: var(--global-theme-color);
+      font-size: 1.5rem;
+      transition: all 0.2s ease;
+
+      &:hover {
+        color: var(--global-hover-color);
+        transform: translateY(-2px);
+      }
+
+      i {
+        display: inline-block;
+      }
+
+      // Text link style (for "cv")
+      &.cv-link-text {
+        font-size: 1rem;
+        font-weight: 500;
+        text-decoration: none;
+        text-transform: lowercase;
+        letter-spacing: 0.05em;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+// CV Page Title - Enhanced styling
+.cv-page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 3px solid var(--global-theme-color);
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--global-theme-color);
+    box-shadow: 0 0 10px rgba(23, 162, 184, 0.3);
+  }
+}
+
+// CV Sidebar sticky positioning with proper top offset
+.col-sm-3 .sticky-top {
+  top: 100px;
+}
+
+// ============================================================================
+// People/Members Page Styles
+// ============================================================================
+
+.people-page {
+  h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    text-transform: lowercase;
+    color: var(--global-text-color);
+
+    &:first-child {
+      margin-top: 1rem;
+    }
+  }
+
+  .coming-soon {
+    font-style: italic;
+    color: var(--global-text-color-light);
+    margin-bottom: 2rem;
+  }
+}
+
+// Members Grid Layout - Option 1: Minimal Cards
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 3.5rem 2.5rem;
+  margin-bottom: 3rem;
+}
+
+// Individual Member Card - Minimal Design (No borders, airy feel, static)
+.member-card {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+// Member Photo - Larger and more prominent, rectangular crop
+.member-photo-container {
+  width: 240px;
+  height: 240px;
+  margin-bottom: 1.25rem;
+}
+
+.member-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid rgba(23, 162, 184, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.member-photo-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background: var(--global-divider-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--global-divider-color);
+
+  i {
+    font-size: 4rem;
+    color: var(--global-text-color-light);
+  }
+}
+
+// Member Info
+.member-info {
+  width: 100%;
+}
+
+.member-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--global-text-color);
+}
+
+.member-position {
+  font-size: 0.95rem;
+  color: var(--global-theme-color);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+// Email and Links Row Container
+.member-email-links-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0.75rem 0;
+  flex-wrap: wrap;
+}
+
+.member-email {
+  font-size: 0.875rem;
+  margin-bottom: 0;
+
+  i {
+    margin-right: 0.25rem;
+    color: var(--global-theme-color);
+  }
+
+  a {
+    color: var(--global-text-color);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--global-theme-color);
+    }
+  }
+}
+
+// Social/Academic Links Inline with Email
+.member-links-inline {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  a {
+    color: var(--global-theme-color);
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: var(--global-hover-color);
+      transform: translateY(-2px);
+    }
+
+    i {
+      display: inline-block;
+    }
+  }
+
+  .member-link-text {
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: lowercase;
+    letter-spacing: 0.05em;
+  }
+}
+
+.member-website {
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+
+  i {
+    margin-right: 0.25rem;
+    color: var(--global-theme-color);
+  }
+
+  a {
+    color: var(--global-theme-color);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// Research Interest Section
+.member-research-interest {
+  margin: 1rem 0;
+  text-align: center;
+
+  .research-interest-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--global-text-color);
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .research-interest-text {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: var(--global-text-color);
+    font-style: italic;
+    opacity: 0.9;
+  }
+}
+
+// Projects Section
+.member-projects {
+  margin: 1rem 0;
+  text-align: center;
+
+  .projects-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--global-text-color);
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .project-tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    margin: 0.25rem 0.25rem 0.25rem 0;
+    background: var(--global-theme-color);
+    color: white;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: var(--global-hover-color);
+      transform: translateY(-1px);
+    }
+  }
+
+  .project-tag-inactive {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    margin: 0.25rem 0.25rem 0.25rem 0;
+    background: var(--global-divider-color);
+    color: var(--global-text-color-light);
+    border-radius: 4px;
+    font-size: 0.8rem;
+  }
+}
+
+// Publications Section - Option B: Subtle Background Box with modifications
+.member-publications {
+  margin: 1.25rem 0;
+  text-align: center;
+
+  .publications-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--global-text-color);
+    margin-bottom: 0.75rem;
+    text-align: center;
+  }
+
+  .publications-list {
+    list-style: none;
+    padding: 1rem 1.25rem;
+    margin: 0 auto;
+    text-align: left;
+    background: var(--global-bg-color);
+    border-left: 3px solid var(--global-theme-color);
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    max-width: 90%;
+
+    li {
+      font-size: 0.85rem;
+      line-height: 1.6;
+      margin-bottom: 0.75rem;
+      padding-left: 0;
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .pub-dot {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--global-theme-color);
+        margin-top: 6px;
+        flex-shrink: 0;
+      }
+
+      .pub-content {
+        flex: 1;
+        min-width: 0;
+
+        .pub-title {
+          color: var(--global-theme-color);
+          text-decoration: none;
+          display: inline;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        .pub-journal {
+          font-style: italic;
+          color: var(--global-text-color);
+          opacity: 0.8;
+        }
+
+        .pub-year {
+          font-style: italic;
+          color: var(--global-text-color);
+          opacity: 0.8;
+        }
+
+        .pub-links {
+          margin-top: 0.4rem;
+          display: flex;
+          gap: 0.5rem;
+          flex-wrap: wrap;
+        }
+
+        .pub-link-btn {
+          display: inline-block;
+          font-size: 0.75rem;
+          padding: 0.2rem 0.5rem;
+          border: 1px solid var(--global-theme-color);
+          border-radius: 3px;
+          color: var(--global-theme-color);
+          text-decoration: none;
+          transition: all 0.2s ease;
+          background: transparent;
+
+          &:hover {
+            background: var(--global-theme-color);
+            color: var(--global-bg-color);
+          }
+        }
+      }
+    }
+  }
+
+  .expand-pubs-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+    padding: 0.5rem 1rem;
+    background: transparent;
+    border: 1px solid var(--global-theme-color);
+    border-radius: 4px;
+    color: var(--global-theme-color);
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: var(--global-theme-color);
+      color: var(--global-bg-color);
+    }
+
+    .expand-icon {
+      font-size: 0.75rem;
+      transition: transform 0.3s ease;
+    }
+
+    &.expanded {
+      .expand-icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .members-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .member-card {
+    padding: 0;
+  }
+
+  .member-photo-container {
+    width: 200px;
+    height: 200px;
+  }
+
+  // Stack email and links vertically on small screens
+  .member-email-links-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }

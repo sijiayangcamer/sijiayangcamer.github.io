@@ -1,0 +1,221 @@
+{
+  "main": {
+    "id": "126735f7ad10fdda",
+    "type": "split",
+    "children": [
+      {
+        "id": "d3a682700958a3ac",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3572f7c6e946b82a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CORRESPONDING_AUTHORS_CORRECTED.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "CORRESPONDING_AUTHORS_CORRECTED"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "7b6c9b6fded6d6a0",
+    "type": "split",
+    "children": [
+      {
+        "id": "6d0d643e49ef93b6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2aa699b681830506",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "c17b9b75cde6ae1b",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "086632cd35bdcf66",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 377.5
+  },
+  "right": {
+    "id": "5a3ea327feea7ad6",
+    "type": "split",
+    "children": [
+      {
+        "id": "52c5bdb004066a38",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "21f5c68938e2f247",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "_pages/cv.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for cv"
+            }
+          },
+          {
+            "id": "6eabd827017d67c7",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "_pages/cv.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from cv"
+            }
+          },
+          {
+            "id": "9a890beff23f2054",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "7b8f85a8f3921612",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "5abad1da3a52267c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "_pages/cv.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of cv"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "3572f7c6e946b82a",
+  "lastOpenFiles": [
+    "CORRESPONDING_AUTHORS_CORRECTED.md",
+    "AUTHOR_NAMES_CORRECTED.md",
+    "_pages/cv.md",
+    "_site/AUTHOR_NAMES_CORRECTED.md",
+    "_site/CORRESPONDING_AUTHORS_CORRECTED.md",
+    "_site/CORRESPONDING_AUTHORS_UPDATE.md",
+    "CORRESPONDING_AUTHORS_UPDATE.md",
+    "_site/ABSTRACTS_IMPORT_SUMMARY.md",
+    "ABSTRACTS_IMPORT_SUMMARY.md",
+    "_site/assets/pdf/cv.pdf",
+    "_pages/about.md",
+    "_pages/blog.md",
+    "assets/pdf/cv.pdf",
+    "_site/teachings/introduction-to-machine-learning/index.html",
+    "_site/teachings/data-science-fundamentals/index.html",
+    "_site/teachings/introduction-to-machine-learning",
+    "_site/teachings/data-science-fundamentals",
+    "_site/teachings",
+    "_site/projects/9_project/index.html",
+    "_site/projects/9_project",
+    "_site/projects/8_project/index.html",
+    "_site/assets/img/template_error.png",
+    "_site/assets/img/rhino.png",
+    "_site/assets/img/publication_preview/wave-mechanics.gif",
+    "_site/assets/img/publication_preview/brownian-motion.gif",
+    "_site/assets/img/prof_pic_color.png",
+    "_site/assets/img/prof_pic.jpg",
+    "_site/assets/img/camer-placeholder.png",
+    "_site/assets/img/book_covers/the_godfather.jpg",
+    "_site/assets/img/9.jpg",
+    "_site/assets/img/8.jpg"
+  ]
+}

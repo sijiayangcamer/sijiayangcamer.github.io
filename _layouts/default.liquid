@@ -36,7 +36,28 @@
           <div class="row">
             <!-- sidebar, which will move to the top on a small screen -->
             <div class="col-sm-3">
-              <nav id="toc-sidebar" class="sticky-top"></nav>
+              <div class="sticky-top">
+                {% if page.profile and page.profile.image %}
+                  <div class="cv-sidebar-profile text-center mb-4">
+                    {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+                    <img src="{{ profile_image_path | relative_url }}" class="img-fluid rounded-circle cv-profile-img" alt="Profile">
+                    {% if page.profile.social_links %}
+                      <div class="cv-social-links mt-3">
+                        {% for link in page.profile.social_links %}
+                          <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer" title="{{ link.label }}" {% if link.type == 'text' %}class="cv-link-text"{% endif %}>
+                            {% if link.type == 'text' %}
+                              {{ link.text }}
+                            {% else %}
+                              <i class="{{ link.icon }}"></i>
+                            {% endif %}
+                          </a>
+                        {% endfor %}
+                      </div>
+                    {% endif %}
+                  </div>
+                {% endif %}
+                <nav id="toc-sidebar"></nav>
+              </div>
             </div>
             <!-- main content area -->
             <div class="col-sm-9">{{ content }}</div>

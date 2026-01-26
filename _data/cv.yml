@@ -1,97 +1,244 @@
-- title: General Information
+- title: general information
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
-    - name: Languages
-      value: English, German
+      value: Sijia Yang
+    - name: Position
+      value: Associate Professor
+    - name: Institution
+      value: School of Journalism and Mass Communication, University of Wisconsin-Madison
+    - name: Email
+      value: syang84@wisc.edu
+    - name: Phone
+      value: (608) 890-2427
+    - name: Address
+      value: 5160 Vilas Hall, 821 University Ave., Madison, WI
 
-- title: Education
-  type: time_table
-  contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
-      description:
-        - Description 1.
-        - Description 2.
-
-- title: Experience
-  type: time_table
-  contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
-      description:
-        - Description 1.
-        - Description 2.
-
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
-
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
-  type: time_table
-  contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
-
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
-      items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
-      items:
-        - Max Planck Medal
-
-- title: Academic Interests
-  type: nested_list
-  contents:
-    - title: Topic 1.
-      items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
-      items:
-        - Description 1.
-        - Description 2.
-
-- title: Other Interests
+- title: research interests
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - message effects and persuasion
+    - computational communication science
+    - health communication
+    - communication of morality
+
+- title: education
+  type: time_table
+  contents:
+    - title: Ph.D., Communication
+      institution: Annenberg School for Communication, University of Pennsylvania
+      year: 2019
+      description:
+        - "Advisor: Dr. Joseph N. Cappella"
+        - "Dissertation: Morality in Tobacco Control Messaging: Effects of Moral Appeals on Persuasion and Retransmission"
+    - title: M.A., Communication
+      institution: University of Illinois at Urbana-Champaign
+      year: 2012
+    - title: B.A., English
+      institution: Renmin University of China
+      year: 2010
+
+- title: employment
+  type: time_table
+  contents:
+    - title: Associate Professor
+      institution: School of Journalism and Mass Communication, UW-Madison
+      year: 2024-present
+      description:
+        - Director, Computational Approaches and Message Effects Research (CAMER) group
+        - Associate Director, Mass Communication Research Center
+        - Faculty Affiliate, UW-Madison Prevention Research Center
+    - title: Assistant Professor
+      institution: School of Journalism and Mass Communication, UW-Madison
+      year: 2019-2024
+
+- title: awards and fellowships
+  type: time_table
+  contents:
+    - year: 2023
+      items:
+        - Top Poster Award (with Lynne M. Cotter), ComSHER division, AEJMC
+        - Terry Hynes Innovative Leadership Award, SJMC, UW-Madison
+    - year: 2022
+      items:
+        - University of Wisconsin-Madison Exceptional Service Award, Office of the Provost
+    - year: 2020
+      items:
+        - Abby Prestin Dissertation of the Year Award, Health Communication Divisions, ICA & NCA
+        - Top Paper Award, Health Communication Division, ICA
+    - year: 2019-2024
+      items:
+        - Louis Maier Faculty Development Award, SJMC, UW-Madison
+    - year: 2018-2019
+      items:
+        - Dissertation Research Fellowship, Annenberg School for Communication
+    - year: 2018
+      items:
+        - Best Project Award (with Xindi Wang, Qinyu E, and Reham Tamime), Summer School on Methods for Computational Social Science, USC
+    - year: 2017
+      items:
+        - The Sprague Award for best graduate student paper (with Dror Walther), American Political Science Association
+
+- title: extramural grants
+  type: time_table
+  contents:
+    - title: John S. and James L. Knight Foundation Research Grant
+      institution: John S. and James L. Knight Foundation
+      year: 2024-2029
+      description:
+        - "Project: Expansion of the Center for Communication and Civic Renewal"
+        - "PIs: Michael Wagner (co-PI), Dhavan Shah (co-PI)"
+        - "Amount: $2,966,450"
+        - "Role: Co-Investigator"
+    - title: NSF Convergence Accelerator (Track F) Phase II
+      institution: National Science Foundation
+      year: 2022-2024
+      description:
+        - "Project: Course Correct: Precision Guidance Against Misinformation"
+        - "PI: Michael Wagner"
+        - "Amount: $5,000,000"
+        - "Role: Co-Principal Investigator"
+    - title: NSF Convergence Accelerator (Track F) Phase I
+      institution: National Science Foundation
+      year: 2021-2022
+      description:
+        - "Project: How Large-Scale Identification and Intervention Can Empower Professional Fact-Checkers"
+        - "PI: Michael Wagner"
+        - "Amount: $750,000"
+        - "Role: Co-Principal Investigator"
+    - title: CDC Prevention Research Center COVID-19 Supplementary Grant
+      institution: Centers for Disease Control and Prevention
+      year: 2021-2022
+      description:
+        - "Project: Connecting Behavioral Science to COVID-19 Vaccine Demand Network"
+        - "PI: Elizabeth Cox"
+        - "Amount: $500,000"
+        - "Role: Co-Investigator"
+    - title: CoronaVirusFacts Grant
+      institution: International Fact-Checking Network
+      year: 2020-2021
+      description:
+        - "Project: Identifying and Implementing Effective Visual Enhancements to Correct High-Priority COVID-19 Misinformation"
+        - "Amount: $9,658"
+        - "Role: Principal Investigator"
+
+- title: intramural grants
+  type: time_table
+  contents:
+    - title: Research Forward 2024
+      institution: Vice Chancellor for Research and Graduate Education, UW-Madison
+      year: 2024-2026
+      description:
+        - "Project: An AI Terrarium for Understanding Intermediated and Personal Communication"
+        - "PI: Timothy Rogers"
+        - "Amount: $499,152"
+        - "Role: Co-Investigator"
+    - title: Fall Competition Grant
+      institution: Vice Chancellor for Research and Graduate Education, UW-Madison
+      year: 2023-2024
+      description:
+        - "Project: Testing the Efficacy of Employing Automated Text Generation AI to Promote Vaccine Confidence"
+        - "Amount: $65,593"
+        - "Role: Principal Investigator"
+    - title: WARF Accelerator Big Data Challenge Grant
+      institution: Wisconsin Alumni Research Foundation
+      year: 2023-2024
+      description:
+        - "Project: VecOpt: Building Adaptable and Explainable Vectionaries"
+        - "Amount: $25,000"
+        - "Role: Principal Investigator"
+    - title: Stakeholder and Patient Engaged Research Pilot Award
+      institution: UW-Madison Institute for Clinical and Translational Research
+      year: 2022-2023
+      description:
+        - "Project: Community Co-Design and Pilot Test of Public Health Messages Addressing Pediatric Vaccine Hesitancy"
+        - "PI: Malia Jones"
+        - "Amount: $100,000"
+        - "Role: Co-Principal Investigator"
+    - title: Wisconsin Idea Collaboration Grant
+      institution: Vice Chancellor for Research and Graduate Education & UW-Madison Division of Extension
+      year: 2022-2024
+      description:
+        - "Project: Community Co-design and Randomized Controlled Trial of Messages Targeting Online Misinformation"
+        - "PI: Malia Jones"
+        - "Amount: $59,985"
+        - "Role: Co-Principal Investigator"
+    - title: Fall Competition Grant
+      institution: Vice Chancellor for Research and Graduate Education, UW-Madison
+      year: 2021-2022
+      description:
+        - "Project: Developing and testing the impacts of cannabis prevention messages for at-risk young adults"
+        - "Amount: $70,032"
+        - "Role: Principal Investigator"
+    - title: Wisconsin Partnership Program Grant
+      institution: Wisconsin Partnership Program, UW-Madison
+      year: 2020-2021
+      description:
+        - "Project: Communication Support for COVID-CHESS"
+        - "PIs: David H. Gustafson, Ryan Westergaard"
+        - "Amount: $470,000"
+        - "Role: Co-Investigator"
+    - title: Fall Competition Grant
+      institution: Vice Chancellor for Research and Graduate Education, UW-Madison
+      year: 2020-2021
+      description:
+        - "Project: What Features Would Make Pictorial Tobacco Control Messages Persuasive and Shareworthy?"
+        - "Amount: $46,209"
+        - "Role: Principal Investigator"
+
+- title: teaching
+  type: nested_list
+  contents:
+    - title: Information for Communication (J203)
+      items:
+        - Spring 2020, Spring 2021, Spring 2022, Fall 2022 (revamped), Fall 2023
+    - title: Communication Research Methods (J658)
+      items:
+        - Fall 2020
+    - title: Concepts and Tools for Data Analytics and Visualization (J677)
+      items:
+        - Spring 2021, Fall 2021 (revamped), Fall 2022, Spring 2024
+    - title: Computational Approaches to Communication Research (J818)
+      items:
+        - Spring 2020 (developed), Fall 2020, Fall 2022
+    - title: Message Effects (J880)
+      items:
+        - Spring 2022 (developed), Fall 2023
+
+- title: graduate student advising
+  type: nested_list
+  contents:
+    - title: current advisees
+      items:
+        - Luhang Sun (co-adviser with Dhavan Shah)
+        - Thomas Hongjie Zhang (advisor)
+        - Feifei Zhao (advisor)
+        - Xiaohui Cao (advisor)
+        - Tianan Lin (advisor)
+    - title: current committee member
+      items:
+        - Alexus Moore, Gaofei Li, Liwei Shen, Xining Liao, Yibing Sun, Diego Romeo, Hyerin Kwon
+    - title: graduated students
+      items:
+        - "2025: Lynne Cotter (advisor) - Senior Health Policy Research Manager, KFF"
+        - "2025: Mengyu Li (member) - Asst. Prof., University of Florida"
+        - "2025: Zening Duan (co-adviser) - Asst. Prof., National University of Singapore"
+        - "2025: Linqi Lu (member) - Asst. Prof., University of North Dakota"
+        - "2024: Lauren Kriss (member) - Senior Program Coordinator, UT-Austin"
+        - "2024: Ran Tao (member) - Asst. Prof., Fairfield University"
+        - "2022: Tomoko Okada (member) - Postdoc, Social Science Center Berlin"
+        - "2022: Jianing Li (member) - Asst. Prof., Rutgers University"
+
+- title: service
+  type: nested_list
+  contents:
+    - title: departmental/university service
+      items:
+        - Founding Faculty Director, Certificate in Digital Media Analytics, UW-Madison (2023-Present)
+        - RISE AI Search Committee (member), SJMC (2024)
+        - Graduate Committee (member), SJMC (2020-2021)
+        - Undergraduate Curriculum Committee (member), SJMC (2019-2020, 2021-2022)
+    - title: professional service
+      items:
+        - Ad hoc Reviewer for Swiss National Science Foundation
+        - Ad hoc Reviewer for Journal of Communication, Communication Theory, Communication Monograph, Communication Research, Human Communication Research, Health Communication, and many other journals

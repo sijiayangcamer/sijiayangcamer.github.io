@@ -1,0 +1,103 @@
+---
+---
+<div class="compact-bib-entry" {% if entry.category %}data-category="{{ entry.category }}"{% endif %}>
+  <div class="d-flex" id="{{ entry.key }}">
+    <!-- Dot indicator -->
+    <div class="flex-shrink-0" style="width: 30px;">
+      <span class="pub-dot"></span>
+    </div>
+
+    <div class="flex-grow-1">
+      <!-- Title -->
+      <div class="title" style="font-size: 0.95rem; font-weight: 600; margin-bottom: 0.25rem;">
+        {{ entry.title }}
+      </div>
+
+      <!-- Authors -->
+      <div class="author" style="font-size: 0.85rem; margin-bottom: 0.2rem;">
+      {% assign author_array_size = entry.author_array | size %}
+      {% assign author_array_limit = author_array_size %}
+      {% if site.max_author_limit and author_array_size > site.max_author_limit %}
+        {% assign author_array_limit = site.max_author_limit %}
+      {% endif %}
+
+      {%- for author in entry.author_array limit: author_array_limit -%}
+        {% assign author_is_self = false %}
+        {% assign author_is_corresponding = false %}
+        {%- assign author_last_name = author.last | regex_replace: '[*∗†‡§¶‖&^]', '' -%}
+        {%- assign author_last_html = author.last | regex_replace: '([*∗†‡§¶‖&^]+)', '<sup>\1</sup>' -%}
+
+        {% if site.scholar.last_name contains author_last_name %}
+          {% if site.scholar.first_name contains author.first %}
+            {% assign author_is_self = true %}
+          {% endif %}
+        {%- endif -%}
+
+        {%- if entry.corresponding -%}
+          {%- assign author_full_name = author_last_name | append: ', ' | append: author.first -%}
+          {%- assign corr_authors = entry.corresponding | split: ' and ' -%}
+          {%- for corr_author in corr_authors -%}
+            {%- assign corr_author_trimmed = corr_author | strip -%}
+            {%- if corr_author_trimmed == author_full_name -%}
+              {% assign author_is_corresponding = true %}
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endif -%}
+
+        {%- if forloop.length > 1 -%}
+          {% if forloop.first == false -%}
+            {%- if forloop.length > 2 %}, {% elsif forloop.length == 2 %}  {% endif %}
+          {%- endif %}
+          {%- if forloop.last and author_array_limit == author_array_size %}and {% endif -%}
+        {% endif %}
+
+        {%- if author_is_self -%}
+          <span style="text-decoration: none;">
+            {{- author.first }} {{ author_last_html -}}
+          </span>
+          {%- if author_is_corresponding -%}*{%- endif -%}
+        {%- else -%}
+          {{- author.first }} {{ author_last_html -}}
+          {%- if author_is_corresponding -%}*{%- endif -%}
+        {% endif %}
+      {%- endfor -%}
+      {% assign more_authors = author_array_size | minus: author_array_limit %}
+      {% if site.max_author_limit and more_authors > 0 %}
+        <span>, and {{ more_authors }} more author{% if more_authors > 1 %}s{% endif %}</span>
+      {%- endif -%}
+    </div>
+
+      <!-- Journal/Conference (no year) -->
+      <div class="periodical" style="font-size: 0.85rem; color: #666; margin-bottom: 0.4rem;">
+        {% if entry.type == 'article' %}
+          <em>{{ entry.journal }}</em>
+        {% elsif entry.type == 'inproceedings' or entry.type == 'conference' %}
+          <em>{{ entry.booktitle }}</em>
+        {% elsif entry.type == 'incollection' %}
+          <em>{{ entry.booktitle }}</em>
+        {% endif %}
+      </div>
+
+      <!-- Buttons -->
+      <div class="links">
+        {% if entry.doi %}
+          <a href="https://doi.org/{{ entry.doi }}" class="btn btn-sm z-depth-0" role="button">doi</a>
+        {% endif %}
+        {% if entry.pdf %}
+          {% if entry.pdf contains '://' %}
+            <a href="{{ entry.pdf }}" class="btn btn-sm z-depth-0" role="button">pdf</a>
+          {% else %}
+            <a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">pdf</a>
+          {% endif %}
+        {% endif %}
+        {% if entry.replication %}
+          {% if entry.replication contains '://' %}
+            <a href="{{ entry.replication }}" class="btn btn-sm z-depth-0" role="button">replication</a>
+          {% else %}
+            <a href="{{ entry.replication }}" class="btn btn-sm z-depth-0" role="button">replication</a>
+          {% endif %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>

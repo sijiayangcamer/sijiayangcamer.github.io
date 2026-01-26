@@ -1,0 +1,222 @@
+graduate_students:
+- name: Luhang Sun
+  photo: members/luhang-sun.jpg
+  email: lsun@wisc.edu
+  research_interest: Investigating how moral appeals in health communication shape public attitudes and behavior change across
+    digital platforms.
+  projects:
+  - 1_project
+  - 2_project
+  publications:
+  - title: 'Smiling women pitching down: Auditing representational and presentational gender biases in image generative AI'
+    journal: Journal of Computer-Mediated Communication
+    year: 2024
+    doi: 10.1093/jcmc/zmad045
+    pdf: sun2024smiling.pdf
+  links:
+    website: https://luhang-sun.com
+    google_scholar: https://scholar.google.com/citations?user=abc123
+    github: https://github.com/lsun
+    linkedin: https://linkedin.com/in/luhangsun
+    twitter: https://twitter.com/luhangsun
+- name: Thomas Hongjie Zhang
+  photo: members/thomas-zhang.jpg
+  email: tzhang@wisc.edu
+  research_interest: Exploring algorithmic influence and the role of AI-generated content in shaping public discourse and
+    information ecosystems.
+  projects:
+  - 3_project
+  publications:
+  - title: 'Care-based moral appeals in pictorial tobacco control messages: Cross-cultural comparison of American and Chinese
+      smokers using real-world campaign messages'
+    journal: 'Journal of Media Psychology: Theories, Methods, and Applications'
+    year: 2025
+    doi: 10.1027/1864-1105/a000495
+    pdf: zhang2025care.pdf
+    replication: https://osf.io/tywja
+  links:
+    cv: /assets/pdf/members/thomas_zhang_cv.pdf
+    google_scholar: https://scholar.google.com/citations?user=xyz456
+    osf: https://osf.io/abc12/
+    linkedin: https://linkedin.com/in/thomaszhang
+- name: Xiaohui Cao
+  photo: ''
+  email: xcao@wisc.edu
+  research_interest: Examining how social media algorithms and recommendation systems influence political polarization and
+    information exposure.
+  projects:
+  - 2_project
+  - 3_project
+  publications:
+  - title: 'Care-based moral appeals in pictorial tobacco control messages: Cross-cultural comparison of American and Chinese
+      smokers using real-world campaign messages'
+    journal: 'Journal of Media Psychology: Theories, Methods, and Applications'
+    year: 2025
+    doi: 10.1027/1864-1105/a000495
+    pdf: zhang2025care.pdf
+    replication: https://osf.io/tywja
+  links:
+    cv: /assets/pdf/members/xiaohui_cao_cv.pdf
+    website: https://xiaohui-cao.com
+    google_scholar: https://scholar.google.com/citations?user=ghi012
+    linkedin: https://linkedin.com/in/xiaohuicao
+undergraduate_students: []
+alumni:
+- name: Lynne Cotter
+  photo: members/lynne-cotter.png
+  current_position: Senior Health Policy Research Manager, KFF
+  email: lcotter@kff.org
+  website: https://lynne-cotter.com
+  publications:
+  - title: 'Co-designing effective pediatric vaccine promotion strategies: Insights from rural Wisconsin parents'
+    journal: Health Promotion Practice
+    year: 2025
+    doi: 10.1177/15248399251391149
+    pdf: passmore2025codesigning.pdf
+  - title: 'Cannabis warning labels, sensory marketing, and electronic word-of-mouth: AI-facilitated textual analysis of a
+      randomized experiment among youth and young adults'
+    journal: International Journal of Advertising
+    year: 2025
+    doi: 10.1080/02650487.2025.2548647
+    pdf: lu2025cannabis.pdf
+  - title: Pictorial warning labels reduce sharing intentions, blunt self-relevance processes elicited by social media posts
+      promoting cannabis edibles
+    journal: Journal of Communication
+    year: 2025
+    doi: 10.1093/joc/jqaf012
+    pdf: minich2025pictorial.pdf
+  - title: 'Increasing confidence for pediatric COVID-19 and influenza vaccines using messages affirming parental autonomy:
+      A randomized online experiment'
+    journal: Vaccine
+    year: 2025
+    doi: 10.1016/j.vaccine.2025.126947
+    pdf: cotter2025pediatric.pdf
+    replication: https://osf.io/acwng
+  - title: 'Fostering trust in public health messaging: Tailoring communication for rural parents'
+    journal: American Journal of Health Promotion
+    year: 2025
+    doi: 10.1177/08901171241278886
+    pdf: passmore2025trust.pdf
+    replication: https://osf.io/9f3r6
+  - title: 'mHealth engagement for antiretroviral medication adherence among people with HIV and substance use disorders:
+      Observational study'
+    journal: Journal of Medical Internet Research
+    year: 2024
+    doi: 10.2196/57774
+    pdf: mi2024mhealth.pdf
+  - title: 'Countering online marketing and user endorsements with enhanced cannabis warning labels: An online experiment
+      among at-risk youth and young adults'
+    journal: Preventive Medicine
+    year: 2024
+    doi: 10.1016/j.ypmed.2024.107877
+    pdf: yang2024cannabis.pdf
+    replication: https://osf.io/4zp6a
+  - title: Are interactive and tailored data visualizations effective in promoting flu vaccination among the elderly? Evidence
+      from a randomized experiment
+    journal: Journal of the American Medical Informatics Association
+    year: 2024
+    doi: 10.1093/jamia/ocad087
+    pdf: cotter2024flu.pdf
+    replication: https://osf.io/5w37k
+- name: Mengyu Li
+  photo: members/mengyu-li.jpg
+  current_position: Assistant Professor, University of Florida
+  email: mli@ufl.edu
+  website: https://mengyu-li.com
+  publications:
+  - title: 'The ``Whole-Of-Society'''' approach for misinformation correction: How expert didactic TikTok videos motivate
+      citizen fact-checking and vaccine promotion'
+    journal: Journal of Health Communication
+    year: 2025
+    doi: 10.1080/10810730.2025.2503179
+    pdf: li2025tiktok.pdf
+    replication: https://osf.io/zw2qh
+  - title: 'Correction by distraction: How high-tempo music enhances medical experts'' debunking TikTok videos'
+    journal: Journal of Computer-Mediated Communication
+    year: 2024
+    doi: 10.1093/jcmc/zmae007
+    pdf: li2024distraction.pdf
+- name: Zening Duan
+  photo: ''
+  current_position: Assistant Professor, National University of Singapore
+  email: zduan@nus.edu.sg
+  website: https://zening-duan.com
+  publications:
+  - title: To quit or not to quit Twitter? The interplay of identities, perceptions, and behavioral reactions to changing
+      platform ownership
+    journal: Information, Communication & Society
+    year: 2025
+    doi: 10.1080/1369118X.2025.2600448
+    pdf: mak2025twitter.pdf
+  - title: 'Constructing vec-tionaries to extract message features from texts: A case study of moral content'
+    journal: Political Analysis
+    year: 2025
+    doi: 10.1017/pan.2025.6
+    pdf: duan2025vectionaries.pdf
+  - title: 'Algorithmic agents in the hybrid media system: Social bots, selective amplification and partisan news about COVID-19'
+    journal: Human Communication Research
+    year: 2022
+    doi: 10.1093/hcr/hqac012
+    pdf: duan2022bots.pdf
+    replication: https://osf.io/2C65S
+  - title: 'Twitter as research data: Tools, costs, skill sets, and lessons learned'
+    journal: Politics and the Life Sciences
+    year: 2022
+    doi: 10.1017/pls.2021.19
+    pdf: chen2022twitter.pdf
+- name: Linqi Lu
+  photo: members/linqi-lu.jpg
+  current_position: Assistant Professor, University of North Dakota
+  email: llu@und.edu
+  website: https://linqi-lu.com
+  publications:
+  - title: 'Cannabis warning labels, sensory marketing, and electronic word-of-mouth: AI-facilitated textual analysis of a
+      randomized experiment among youth and young adults'
+    journal: International Journal of Advertising
+    year: 2025
+    doi: 10.1080/02650487.2025.2548647
+    pdf: lu2025cannabis.pdf
+  - title: Pictorial warning labels reduce sharing intentions, blunt self-relevance processes elicited by social media posts
+      promoting cannabis edibles
+    journal: Journal of Communication
+    year: 2025
+    doi: 10.1093/joc/jqaf012
+    pdf: minich2025pictorial.pdf
+  - title: 'mHealth engagement for antiretroviral medication adherence among people with HIV and substance use disorders:
+      Observational study'
+    journal: Journal of Medical Internet Research
+    year: 2024
+    doi: 10.2196/57774
+    pdf: mi2024mhealth.pdf
+  - title: 'Countering online marketing and user endorsements with enhanced cannabis warning labels: An online experiment
+      among at-risk youth and young adults'
+    journal: Preventive Medicine
+    year: 2024
+    doi: 10.1016/j.ypmed.2024.107877
+    pdf: yang2024cannabis.pdf
+    replication: https://osf.io/4zp6a
+- name: Lauren Kriss
+  photo: members/lauren-kriss.jpg
+  current_position: Senior Program Coordinator, UT-Austin
+  email: lkriss@utexas.edu
+  website: ''
+  publications:
+  - title: 'Cannabis warning labels, sensory marketing, and electronic word-of-mouth: AI-facilitated textual analysis of a
+      randomized experiment among youth and young adults'
+    journal: International Journal of Advertising
+    year: 2025
+    doi: 10.1080/02650487.2025.2548647
+    pdf: lu2025cannabis.pdf
+  - title: Pictorial warning labels reduce sharing intentions, blunt self-relevance processes elicited by social media posts
+      promoting cannabis edibles
+    journal: Journal of Communication
+    year: 2025
+    doi: 10.1093/joc/jqaf012
+    pdf: minich2025pictorial.pdf
+  - title: 'Countering online marketing and user endorsements with enhanced cannabis warning labels: An online experiment
+      among at-risk youth and young adults'
+    journal: Preventive Medicine
+    year: 2024
+    doi: 10.1016/j.ypmed.2024.107877
+    pdf: yang2024cannabis.pdf
+    replication: https://osf.io/4zp6a

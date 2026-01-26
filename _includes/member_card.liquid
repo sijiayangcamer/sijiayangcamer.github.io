@@ -1,0 +1,328 @@
+{% comment %}
+  Member Card Include
+
+  Usage: {% include member_card.liquid member=member type="graduate" %}
+
+  Parameters:
+  - member: The member data object
+  - type: "graduate", "undergraduate", or "alumni"
+{% endcomment %}
+
+<div class="member-card">
+  <div class="member-photo-container">
+    {% if member.photo %}
+      <img src="{{ member.photo | prepend: 'assets/img/' | relative_url }}"
+           alt="{{ member.name }}"
+           class="member-photo">
+    {% else %}
+      <div class="member-photo-placeholder">
+        <i class="fas fa-user"></i>
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="member-info">
+    <h4 class="member-name">{{ member.name }}</h4>
+
+    {% if include.type == "alumni" %}
+      {% if member.current_position %}
+        <p class="member-position">{{ member.current_position }}</p>
+      {% endif %}
+      {% if member.email %}
+        <div class="member-email-links-row">
+          <p class="member-email">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:{{ member.email }}">{{ member.email }}</a>
+          </p>
+
+          {%- comment -%} Social/Academic Links inline with email {%- endcomment -%}
+          {% if member.website %}
+            <div class="member-links-inline">
+              <a href="{{ member.website }}" target="_blank" rel="noopener noreferrer" title="Website">
+                <i class="fas fa-link"></i>
+              </a>
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {%- comment -%} Display publications for alumni {%- endcomment -%}
+      {% if include.publications and include.publications.size > 0 %}
+        <div class="member-publications" data-member-id="{{ member.name | slugify }}">
+          <p class="publications-label">
+            recent CAMER publications:
+          </p>
+          <ul class="publications-list">
+            {% for pub in include.publications limit:3 %}
+              <li class="pub-item">
+                <span class="pub-dot"></span>
+                <div class="pub-content">
+                  <div>
+                    {% if pub.html %}
+                      <a href="{{ pub.html }}" class="pub-title" target="_blank" rel="noopener noreferrer">{{ pub.title }}</a>
+                    {% elsif pub.doi %}
+                      <a href="https://doi.org/{{ pub.doi }}" class="pub-title" target="_blank" rel="noopener noreferrer">{{ pub.title }}</a>
+                    {% else %}
+                      <span class="pub-title">{{ pub.title }}</span>
+                    {% endif %}
+                  </div>
+                  {% if pub.journal %}
+                    <div class="pub-journal">{{ pub.journal }} ({{ pub.year }})</div>
+                  {% elsif pub.year %}
+                    <div class="pub-year">({{ pub.year }})</div>
+                  {% endif %}
+                  {% if pub.pdf or pub.replication %}
+                    <div class="pub-links">
+                      {% if pub.pdf %}
+                        {% if pub.pdf contains '://' %}
+                          <a href="{{ pub.pdf }}" class="pub-link-btn" target="_blank" rel="noopener noreferrer">pdf</a>
+                        {% else %}
+                          <a href="{{ pub.pdf | prepend: '/assets/pdf/' | relative_url }}" class="pub-link-btn" target="_blank" rel="noopener noreferrer">pdf</a>
+                        {% endif %}
+                      {% endif %}
+                      {% if pub.replication %}
+                        {% if pub.replication contains '://' %}
+                          <a href="{{ pub.replication }}" class="pub-link-btn" target="_blank" rel="noopener noreferrer">replication</a>
+                        {% else %}
+                          <a href="{{ pub.replication }}" class="pub-link-btn" target="_blank" rel="noopener noreferrer">replication</a>
+                        {% endif %}
+                      {% endif %}
+                    </div>
+                  {% endif %}
+                </div>
+              </li>
+            {% endfor %}
+
+            {%- comment -%} Hidden publications (shown when expanded) {%- endcomment -%}
+            {% if include.publications.size > 3 %}
+              {% for pub in include.publications offset:3 %}
+                <li class="pub-item pub-item-hidden" style="display: none;">
+                  <span class="pub-dot"></span>
+                  <div class="pub-content">
+                    <div>
+                      {% if pub.html %}
+                        <a href="{{ pub.html }}" class="pub-title" target="_blank" rel="noopener noreferrer">{{ pub.title }}</a>
+                      {% elsif pub.doi %}
+                        <a href="https://doi.org/{{ pub.doi }}" class="pub-title" target="_blank" rel="noopener noreferrer">{{ pub.title }}</a>
+                      {% else %}
+                        <span class="pub-title">{{ pub.title }}</span>
+                      {% endif %}
+                    </div>
+                    {% if pub.journal %}
+                      <div class="pub-journal">{{ pub.journal }} ({{ pub.year }})</div>
+                    {% elsif pub.year %}
+                      <div class="pub-year">({{ pub.year }})</div>
+                    {% endif %}
+                    {% if pub.pdf or pub.replication %}
+                      <div class="pub-links">
+                        {% if pub.pdf %}
+                          {% if pub.pdf contains '://' %}
+                            <a href="{{ pub.pdf }}" class="pub-link-btn" target="_blank" rel="noopener noreferrer">pdf</a>
+                          {% else %}
+                            <a href="{{ pub.pdf | prepend: '/assets/pdf/' | relative_url }}" class="pub-link-btn" target="_blank" rel="noopener noreferrer">pdf</a>
+                          {% endif %}
+                        {% endif %}
+                        {% if pub.replication %}
+                          {% if pub.replication contains '://' %}
+                            <a href="{{ pub.replication }}" class="pub-link-btn" target="_blank" rel="noopener noreferrer">replication</a>
+                          {% else %}
+                            <a href="{{ pub.replication }}" class="pub-link-btn" target="_blank" rel="noopener noreferrer">replication</a>
+                          {% endif %}
+                        {% endif %}
+                      </div>
+                    {% endif %}
+                  </div>
+                </li>
+              {% endfor %}
+            {% endif %}
+          </ul>
+
+          {%- comment -%} Show expand button only if more than 3 publications {%- endcomment -%}
+          {% if include.publications.size > 3 %}
+            <button class="expand-pubs-btn" data-member-id="{{ member.name | slugify }}">
+              <span class="expand-text">Click to see more</span>
+              <span class="collapse-text" style="display: none;">Show less</span>
+              <i class="fas fa-chevron-down expand-icon"></i>
+            </button>
+          {% endif %}
+        </div>
+      {% endif %}
+
+    {% else %}
+      {%- comment -%} Graduate or Undergraduate Students {%- endcomment -%}
+
+      {% if member.email %}
+        <div class="member-email-links-row">
+          <p class="member-email">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:{{ member.email }}">{{ member.email }}</a>
+          </p>
+
+          {%- comment -%} Social/Academic Links inline with email {%- endcomment -%}
+          {% if member.links %}
+            <div class="member-links-inline">
+              {% if member.links.cv %}
+                <a href="{{ member.links.cv }}" target="_blank" rel="noopener noreferrer" title="CV" class="member-link-text">cv</a>
+              {% endif %}
+              {% if member.links.website %}
+                <a href="{{ member.links.website }}" target="_blank" rel="noopener noreferrer" title="Website">
+                  <i class="fas fa-link"></i>
+                </a>
+              {% endif %}
+              {% if member.links.google_scholar %}
+                <a href="{{ member.links.google_scholar }}" target="_blank" rel="noopener noreferrer" title="Google Scholar">
+                  <i class="ai ai-google-scholar"></i>
+                </a>
+              {% endif %}
+              {% if member.links.github %}
+                <a href="{{ member.links.github }}" target="_blank" rel="noopener noreferrer" title="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+              {% endif %}
+              {% if member.links.osf %}
+                <a href="{{ member.links.osf }}" target="_blank" rel="noopener noreferrer" title="OSF">
+                  <i class="ai ai-osf"></i>
+                </a>
+              {% endif %}
+              {% if member.links.linkedin %}
+                <a href="{{ member.links.linkedin }}" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              {% endif %}
+              {% if member.links.twitter %}
+                <a href="{{ member.links.twitter }}" target="_blank" rel="noopener noreferrer" title="Twitter/X">
+                  <i class="fab fa-x-twitter"></i>
+                </a>
+              {% endif %}
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if member.research_interest %}
+        <div class="member-research-interest">
+          <span class="research-interest-label">research interest:</span>
+          <p class="research-interest-text">{{ member.research_interest }}</p>
+        </div>
+      {% endif %}
+
+      {% if member.projects and member.projects.size > 0 %}
+        <div class="member-projects">
+          <span class="projects-label">projects:</span>
+          {% for project_slug in member.projects %}
+            {% assign project_file = project_slug | append: '.md' %}
+            {% assign project = site.projects | where: "slug", project_slug | first %}
+            {% if project %}
+              <a href="{{ project.url | relative_url }}" class="project-tag">{{ project.title }}</a>
+            {% else %}
+              <span class="project-tag-inactive">{{ project_slug }}</span>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      {%- comment -%} Display publications passed from page {%- endcomment -%}
+      {% if include.publications and include.publications.size > 0 %}
+        <div class="member-publications" data-member-id="{{ member.name | slugify }}">
+          <p class="publications-label">
+            recent CAMER publications:
+          </p>
+          <ul class="publications-list">
+            {% for pub in include.publications limit:3 %}
+              <li class="pub-item">
+                <span class="pub-dot"></span>
+                <div class="pub-content">
+                  <div>
+                    {% if pub.html %}
+                      <a href="{{ pub.html }}" class="pub-title" target="_blank" rel="noopener noreferrer">{{ pub.title }}</a>
+                    {% elsif pub.doi %}
+                      <a href="https://doi.org/{{ pub.doi }}" class="pub-title" target="_blank" rel="noopener noreferrer">{{ pub.title }}</a>
+                    {% else %}
+                      <span class="pub-title">{{ pub.title }}</span>
+                    {% endif %}
+                  </div>
+                  {% if pub.journal %}
+                    <div class="pub-journal">{{ pub.journal }} ({{ pub.year }})</div>
+                  {% elsif pub.year %}
+                    <div class="pub-year">({{ pub.year }})</div>
+                  {% endif %}
+                  {% if pub.pdf or pub.replication %}
+                    <div class="pub-links">
+                      {% if pub.pdf %}
+                        {% if pub.pdf contains '://' %}
+                          <a href="{{ pub.pdf }}" class="pub-link-btn" target="_blank" rel="noopener noreferrer">pdf</a>
+                        {% else %}
+                          <a href="{{ pub.pdf | prepend: '/assets/pdf/' | relative_url }}" class="pub-link-btn" target="_blank" rel="noopener noreferrer">pdf</a>
+                        {% endif %}
+                      {% endif %}
+                      {% if pub.replication %}
+                        {% if pub.replication contains '://' %}
+                          <a href="{{ pub.replication }}" class="pub-link-btn" target="_blank" rel="noopener noreferrer">replication</a>
+                        {% else %}
+                          <a href="{{ pub.replication }}" class="pub-link-btn" target="_blank" rel="noopener noreferrer">replication</a>
+                        {% endif %}
+                      {% endif %}
+                    </div>
+                  {% endif %}
+                </div>
+              </li>
+            {% endfor %}
+
+            {%- comment -%} Hidden publications (shown when expanded) {%- endcomment -%}
+            {% if include.publications.size > 3 %}
+              {% for pub in include.publications offset:3 %}
+                <li class="pub-item pub-item-hidden" style="display: none;">
+                  <span class="pub-dot"></span>
+                  <div class="pub-content">
+                    <div>
+                      {% if pub.html %}
+                        <a href="{{ pub.html }}" class="pub-title" target="_blank" rel="noopener noreferrer">{{ pub.title }}</a>
+                      {% elsif pub.doi %}
+                        <a href="https://doi.org/{{ pub.doi }}" class="pub-title" target="_blank" rel="noopener noreferrer">{{ pub.title }}</a>
+                      {% else %}
+                        <span class="pub-title">{{ pub.title }}</span>
+                      {% endif %}
+                    </div>
+                    {% if pub.journal %}
+                      <div class="pub-journal">{{ pub.journal }} ({{ pub.year }})</div>
+                    {% elsif pub.year %}
+                      <div class="pub-year">({{ pub.year }})</div>
+                    {% endif %}
+                    {% if pub.pdf or pub.replication %}
+                      <div class="pub-links">
+                        {% if pub.pdf %}
+                          {% if pub.pdf contains '://' %}
+                            <a href="{{ pub.pdf }}" class="pub-link-btn" target="_blank" rel="noopener noreferrer">pdf</a>
+                          {% else %}
+                            <a href="{{ pub.pdf | prepend: '/assets/pdf/' | relative_url }}" class="pub-link-btn" target="_blank" rel="noopener noreferrer">pdf</a>
+                          {% endif %}
+                        {% endif %}
+                        {% if pub.replication %}
+                          {% if pub.replication contains '://' %}
+                            <a href="{{ pub.replication }}" class="pub-link-btn" target="_blank" rel="noopener noreferrer">replication</a>
+                          {% else %}
+                            <a href="{{ pub.replication }}" class="pub-link-btn" target="_blank" rel="noopener noreferrer">replication</a>
+                          {% endif %}
+                        {% endif %}
+                      </div>
+                    {% endif %}
+                  </div>
+                </li>
+              {% endfor %}
+            {% endif %}
+          </ul>
+
+          {%- comment -%} Show expand button only if more than 3 publications {%- endcomment -%}
+          {% if include.publications.size > 3 %}
+            <button class="expand-pubs-btn" data-member-id="{{ member.name | slugify }}">
+              <span class="expand-text">Click to see more</span>
+              <span class="collapse-text" style="display: none;">Show less</span>
+              <i class="fas fa-chevron-down expand-icon"></i>
+            </button>
+          {% endif %}
+        </div>
+      {% endif %}
+
+    {% endif %}
+  </div>
+</div>
