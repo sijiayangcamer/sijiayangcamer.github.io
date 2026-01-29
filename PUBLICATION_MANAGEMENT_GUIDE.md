@@ -581,13 +581,13 @@ category={translational},  % Translational Communication Interventions
 
 ## Printable Checklist
 
-**Publication Title:** ****************\_****************
+**Publication Title:** ******\*\*\*\*******\_******\*\*\*\*******
 
-**First Author:** ****************\_****************
+**First Author:** ******\*\*\*\*******\_******\*\*\*\*******
 
-**BibTeX Key:** ****************\_****************
+**BibTeX Key:** ******\*\*\*\*******\_******\*\*\*\*******
 
-**Date Added:** ****************\_****************
+**Date Added:** ******\*\*\*\*******\_******\*\*\*\*******
 
 ---
 
@@ -668,9 +668,9 @@ category={translational},  % Translational Communication Interventions
 - [ ] All checks passed
 - [ ] Ready for deployment
 
-**Checked by:** ****************\_****************
+**Checked by:** ******\*\*\*\*******\_******\*\*\*\*******
 
-**Date:** ****************\_****************
+**Date:** ******\*\*\*\*******\_******\*\*\*\*******
 
 **Notes/Issues:**
 
