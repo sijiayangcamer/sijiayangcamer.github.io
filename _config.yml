@@ -2,7 +2,7 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: CAMER 
+title: CAMER
 first_name: Sijia
 middle_name:
 last_name: Yang
@@ -13,7 +13,7 @@ keywords: computational communication science, message effects, persuasion, mora
 lang: en
 icon: ⚛️
 
-url: "https://sijiayangcamer.github.io" 
+url: "https://sijiayangcamer.github.io"
 baseurl: ""
 last_updated: false
 impressum_path:

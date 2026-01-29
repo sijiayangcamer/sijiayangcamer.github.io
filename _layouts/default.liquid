@@ -44,7 +44,15 @@
                     {% if page.profile.social_links %}
                       <div class="cv-social-links mt-3">
                         {% for link in page.profile.social_links %}
-                          <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer" title="{{ link.label }}" {% if link.type == 'text' %}class="cv-link-text"{% endif %}>
+                          <a
+                            href="{{ link.url }}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="{{ link.label }}"
+                            {% if link.type == 'text' %}
+                              class="cv-link-text"
+                            {% endif %}
+                          >
                             {% if link.type == 'text' %}
                               {{ link.text }}
                             {% else %}

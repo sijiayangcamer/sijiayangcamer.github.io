@@ -23,7 +23,7 @@ layout: default
           <div class="news-section mb-5">
             <h2 class="mb-4">news</h2>
             <div class="news-timeline">
-              {% for item in site.data.news limit:5 %}
+              {% for item in site.data.news limit: 5 %}
                 <div class="news-item">
                   <div class="news-dot"></div>
                   <div class="news-content">
@@ -43,9 +43,7 @@ layout: default
             {% bibliography --max 5 --template compact --group_by none %}
           </div>
           <div class="mt-3">
-            <a href="{{ '/publications/' | relative_url }}" class="see-all-link">
-              See all publications →
-            </a>
+            <a href="{{ '/publications/' | relative_url }}" class="see-all-link"> See all publications → </a>
           </div>
         </div>
       </div>

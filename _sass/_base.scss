@@ -1539,7 +1539,7 @@ mjx-container[jax="CHTML"][display="true"] {
     padding-left: 30px;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       left: 8px;
       top: 8px;
@@ -1778,7 +1778,7 @@ mjx-container[jax="CHTML"][display="true"] {
   position: relative;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -3px;
     left: 0;

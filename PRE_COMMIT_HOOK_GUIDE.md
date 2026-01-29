@@ -52,6 +52,7 @@ The hook uses the Python virtual environment (`.venv`) with PyYAML installed. Th
 ## Troubleshooting
 
 If the hook fails:
+
 1. Check that `.venv` exists and has PyYAML installed
 2. Run the script manually to see the error:
    ```bash

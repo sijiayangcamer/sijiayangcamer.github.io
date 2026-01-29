@@ -1,6 +1,11 @@
 ---
 ---
-<div class="row" {% if entry.category %}data-category="{{ entry.category }}"{% endif %}>
+<div
+  class="row"
+  {% if entry.category %}
+    data-category="{{ entry.category }}"
+  {% endif %}
+>
   {% if site.enable_publication_thumbnails %}
     <div class="col col-sm-2 abbr">
       {%- if entry.abbr -%}
@@ -198,9 +203,7 @@
       {{ periodical | strip }}
     </div>
     {% if entry.note %}
-    <div class="periodical" style="margin-top: 0.5rem;">
-      Note: {{ entry.note | strip }}
-    </div>
+      <div class="periodical" style="margin-top: 0.5rem;">Note: {{ entry.note | strip }}</div>
     {% endif %}
 
     <!-- Links/Buttons -->

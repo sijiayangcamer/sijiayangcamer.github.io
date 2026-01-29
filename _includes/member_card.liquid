@@ -11,9 +11,11 @@
 <div class="member-card">
   <div class="member-photo-container">
     {% if member.photo %}
-      <img src="{{ member.photo | prepend: 'assets/img/' | relative_url }}"
-           alt="{{ member.name }}"
-           class="member-photo">
+      <img
+        src="{{ member.photo | prepend: 'assets/img/' | relative_url }}"
+        alt="{{ member.name }}"
+        class="member-photo"
+      >
     {% else %}
       <div class="member-photo-placeholder">
         <i class="fas fa-user"></i>
@@ -24,7 +26,7 @@
   <div class="member-info">
     <h4 class="member-name">{{ member.name }}</h4>
 
-    {% if include.type == "alumni" %}
+    {% if include.type == 'alumni' %}
       {% if member.current_position %}
         <p class="member-position">{{ member.current_position }}</p>
       {% endif %}
@@ -49,11 +51,9 @@
       {%- comment -%} Display publications for alumni {%- endcomment -%}
       {% if include.publications and include.publications.size > 0 %}
         <div class="member-publications" data-member-id="{{ member.name | slugify }}">
-          <p class="publications-label">
-            recent CAMER publications:
-          </p>
+          <p class="publications-label">recent CAMER publications:</p>
           <ul class="publications-list">
-            {% for pub in include.publications limit:3 %}
+            {% for pub in include.publications limit: 3 %}
               <li class="pub-item">
                 <span class="pub-dot"></span>
                 <div class="pub-content">
@@ -77,7 +77,13 @@
                         {% if pub.pdf contains '://' %}
                           <a href="{{ pub.pdf }}" class="pub-link-btn" target="_blank" rel="noopener noreferrer">pdf</a>
                         {% else %}
-                          <a href="{{ pub.pdf | prepend: '/assets/pdf/' | relative_url }}" class="pub-link-btn" target="_blank" rel="noopener noreferrer">pdf</a>
+                          <a
+                            href="{{ pub.pdf | prepend: '/assets/pdf/' | relative_url }}"
+                            class="pub-link-btn"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >pdf</a
+                          >
                         {% endif %}
                       {% endif %}
                       {% if pub.replication %}
@@ -95,7 +101,7 @@
 
             {%- comment -%} Hidden publications (shown when expanded) {%- endcomment -%}
             {% if include.publications.size > 3 %}
-              {% for pub in include.publications offset:3 %}
+              {% for pub in include.publications offset: 3 %}
                 <li class="pub-item pub-item-hidden" style="display: none;">
                   <span class="pub-dot"></span>
                   <div class="pub-content">
@@ -119,7 +125,13 @@
                           {% if pub.pdf contains '://' %}
                             <a href="{{ pub.pdf }}" class="pub-link-btn" target="_blank" rel="noopener noreferrer">pdf</a>
                           {% else %}
-                            <a href="{{ pub.pdf | prepend: '/assets/pdf/' | relative_url }}" class="pub-link-btn" target="_blank" rel="noopener noreferrer">pdf</a>
+                            <a
+                              href="{{ pub.pdf | prepend: '/assets/pdf/' | relative_url }}"
+                              class="pub-link-btn"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >pdf</a
+                            >
                           {% endif %}
                         {% endif %}
                         {% if pub.replication %}
@@ -211,7 +223,7 @@
           <span class="projects-label">projects:</span>
           {% for project_slug in member.projects %}
             {% assign project_file = project_slug | append: '.md' %}
-            {% assign project = site.projects | where: "slug", project_slug | first %}
+            {% assign project = site.projects | where: 'slug', project_slug | first %}
             {% if project %}
               <a href="{{ project.url | relative_url }}" class="project-tag">{{ project.title }}</a>
             {% else %}
@@ -224,11 +236,9 @@
       {%- comment -%} Display publications passed from page {%- endcomment -%}
       {% if include.publications and include.publications.size > 0 %}
         <div class="member-publications" data-member-id="{{ member.name | slugify }}">
-          <p class="publications-label">
-            recent CAMER publications:
-          </p>
+          <p class="publications-label">recent CAMER publications:</p>
           <ul class="publications-list">
-            {% for pub in include.publications limit:3 %}
+            {% for pub in include.publications limit: 3 %}
               <li class="pub-item">
                 <span class="pub-dot"></span>
                 <div class="pub-content">
@@ -252,7 +262,13 @@
                         {% if pub.pdf contains '://' %}
                           <a href="{{ pub.pdf }}" class="pub-link-btn" target="_blank" rel="noopener noreferrer">pdf</a>
                         {% else %}
-                          <a href="{{ pub.pdf | prepend: '/assets/pdf/' | relative_url }}" class="pub-link-btn" target="_blank" rel="noopener noreferrer">pdf</a>
+                          <a
+                            href="{{ pub.pdf | prepend: '/assets/pdf/' | relative_url }}"
+                            class="pub-link-btn"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >pdf</a
+                          >
                         {% endif %}
                       {% endif %}
                       {% if pub.replication %}
@@ -270,7 +286,7 @@
 
             {%- comment -%} Hidden publications (shown when expanded) {%- endcomment -%}
             {% if include.publications.size > 3 %}
-              {% for pub in include.publications offset:3 %}
+              {% for pub in include.publications offset: 3 %}
                 <li class="pub-item pub-item-hidden" style="display: none;">
                   <span class="pub-dot"></span>
                   <div class="pub-content">
@@ -294,7 +310,13 @@
                           {% if pub.pdf contains '://' %}
                             <a href="{{ pub.pdf }}" class="pub-link-btn" target="_blank" rel="noopener noreferrer">pdf</a>
                           {% else %}
-                            <a href="{{ pub.pdf | prepend: '/assets/pdf/' | relative_url }}" class="pub-link-btn" target="_blank" rel="noopener noreferrer">pdf</a>
+                            <a
+                              href="{{ pub.pdf | prepend: '/assets/pdf/' | relative_url }}"
+                              class="pub-link-btn"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >pdf</a
+                            >
                           {% endif %}
                         {% endif %}
                         {% if pub.replication %}
@@ -322,7 +344,6 @@
           {% endif %}
         </div>
       {% endif %}
-
     {% endif %}
   </div>
 </div>

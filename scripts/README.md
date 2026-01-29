@@ -30,6 +30,7 @@ python scripts/update_member_publications.py
 ### Name Matching
 
 The script handles various name formats:
+
 - "Firstname Lastname" matches "Lastname, Firstname" (BibTeX format)
 - Handles middle names/initials
 - Case-insensitive matching
@@ -37,6 +38,7 @@ The script handles various name formats:
 ### Output
 
 For each member in `graduate_students` and `undergraduate_students`, the script adds a `publications` array containing:
+
 - `title`: Publication title
 - `journal`: Journal or conference name
 - `year`: Publication year
@@ -48,6 +50,7 @@ Alumni are not processed since they don't display publications on the people pag
 ### When to run
 
 Run this script whenever:
+
 - You add new publications to `papers.bib`
 - You add new members to `members.yml`
 - You need to refresh the publication listings

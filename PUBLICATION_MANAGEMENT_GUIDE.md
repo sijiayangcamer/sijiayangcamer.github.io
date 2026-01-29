@@ -12,7 +12,7 @@ This guide provides complete instructions for adding new publications to the CAM
 ✅ Appear on the Publications page, grouped by year
 ✅ Be filterable by research area (Communication of Morality, Artificial Influence, Translational Communication Interventions)
 ✅ Show up in "Recent Publications" on the homepage (5 most recent)
-✅ Display corresponding author markers with asterisks (*)
+✅ Display corresponding author markers with asterisks (\*)
 ✅ Link to full PDF and DOI
 
 ---
@@ -43,6 +43,7 @@ This guide provides complete instructions for adding new publications to the CAM
 5. **Verify** in `_site/publications/index.html` and `_site/index.html`
 
 **Key formatting rules:**
+
 - Authors: `{LastName, FirstName and LastName, FirstName}`
 - Corresponding: `{LastName, FirstName}` (must match author format exactly)
 - Category: `{morality}`, `{artificial}`, or `{translational}` (required)
@@ -79,6 +80,7 @@ Before starting, collect:
 **Template:** See [BibTeX Templates](#bibtex-templates) section below
 
 **Important notes:**
+
 - Insert at the TOP for newest publications to appear first
 - Use `@article` for journal articles, `@inproceedings` for conference papers
 - BibTeX key format: `firstauthorYEARkeyword` (e.g., `liu2025eyetracking`)
@@ -89,11 +91,13 @@ Before starting, collect:
 **Location:** `assets/img/publication_preview/`
 
 **Naming convention:** `lastname_year_keyword.png`
+
 - Example: `liu_2025_visual.png`
 - Use underscores, lowercase
 - Must match filename in `preview={...}` field
 
 **Image requirements:**
+
 - **Format:** PNG (preferred) or JPG
 - **Dimensions:** 800-1200px wide recommended
 - **Aspect ratio:** 16:9 or 4:3 works best
@@ -105,11 +109,13 @@ Before starting, collect:
 **Location:** `assets/pdf/`
 
 **Naming convention:** Must match BibTeX key **exactly** + `.pdf`
+
 - BibTeX key: `liu2025eyetracking`
 - PDF filename: `liu2025eyetracking.pdf`
 - Case-sensitive!
 
 **File requirements:**
+
 - Final published version (not preprint)
 - Must be named in `pdf={...}` field
 
@@ -123,6 +129,7 @@ bundle exec jekyll build
 ```
 
 **Expected output:**
+
 ```
 Configuration file: _config.yml
             Source: /Users/sijiayang/Documents/sijiayangcamer.github.io
@@ -176,6 +183,7 @@ Copy and paste this template into `papers.bib`:
 ```
 
 **Category options:**
+
 - `category={morality}` - Communication of Morality
 - `category={artificial}` - Artificial Influence
 - `category={translational}` - Translational Communication Interventions
@@ -233,31 +241,31 @@ Copy and paste this template into `papers.bib`:
 
 ### Required Fields
 
-| Field | Description | Example | Notes |
-|-------|-------------|---------|-------|
-| **title** | Publication title | `{Visual attention and memory retention...}` | Enclose in braces |
-| **author** | All authors | `{Liu, Jiaying and Yang, Sijia}` | **Must use "Last, First" format** separated by " and " |
-| **journal** | Journal name (articles) | `{Annals of Behavioral Medicine}` | Use full journal name |
-| **booktitle** | Conference name (proceedings) | `{Proceedings of CHI 2025}` | For @inproceedings only |
-| **year** | Publication year | `{2025}` | 4-digit year |
-| **doi** | Digital Object Identifier | `{10.1093/abm/kaaf094}` | **Just the identifier, no https://** |
-| **abbr** | Venue abbreviation | `{ABM}` | Shown as colored badge |
-| **preview** | Thumbnail filename | `{liu_2025_visual.png}` | Must exist in assets/img/publication_preview/ |
-| **category** | Research area | `{translational}` | **Required:** morality, artificial, or translational |
-| **abstract** | Full abstract | `{Your abstract...}` | Can span multiple lines |
-| **corresponding** | Corresponding author(s) | `{Yang, Sijia}` | **Must match author format exactly** |
-| **pdf** | PDF filename | `{liu2025eyetracking.pdf}` | Must match BibTeX key |
+| Field             | Description                   | Example                                      | Notes                                                  |
+| ----------------- | ----------------------------- | -------------------------------------------- | ------------------------------------------------------ |
+| **title**         | Publication title             | `{Visual attention and memory retention...}` | Enclose in braces                                      |
+| **author**        | All authors                   | `{Liu, Jiaying and Yang, Sijia}`             | **Must use "Last, First" format** separated by " and " |
+| **journal**       | Journal name (articles)       | `{Annals of Behavioral Medicine}`            | Use full journal name                                  |
+| **booktitle**     | Conference name (proceedings) | `{Proceedings of CHI 2025}`                  | For @inproceedings only                                |
+| **year**          | Publication year              | `{2025}`                                     | 4-digit year                                           |
+| **doi**           | Digital Object Identifier     | `{10.1093/abm/kaaf094}`                      | **Just the identifier, no https://**                   |
+| **abbr**          | Venue abbreviation            | `{ABM}`                                      | Shown as colored badge                                 |
+| **preview**       | Thumbnail filename            | `{liu_2025_visual.png}`                      | Must exist in assets/img/publication_preview/          |
+| **category**      | Research area                 | `{translational}`                            | **Required:** morality, artificial, or translational   |
+| **abstract**      | Full abstract                 | `{Your abstract...}`                         | Can span multiple lines                                |
+| **corresponding** | Corresponding author(s)       | `{Yang, Sijia}`                              | **Must match author format exactly**                   |
+| **pdf**           | PDF filename                  | `{liu2025eyetracking.pdf}`                   | Must match BibTeX key                                  |
 
 ### Optional Fields
 
-| Field | Description | Example |
-|-------|-------------|---------|
-| **volume** | Journal volume | `{59}` |
-| **number** | Issue number | `{1}` |
-| **pages** | Page range | `{123--145}` |
-| **note** | Special authorship notes | `{First two authors contributed equally}` |
-| **replication** | Replication materials link | `{https://osf.io/k97xh}` |
-| **selected** | Mark as featured | `{true}` |
+| Field           | Description                | Example                                   |
+| --------------- | -------------------------- | ----------------------------------------- |
+| **volume**      | Journal volume             | `{59}`                                    |
+| **number**      | Issue number               | `{1}`                                     |
+| **pages**       | Page range                 | `{123--145}`                              |
+| **note**        | Special authorship notes   | `{First two authors contributed equally}` |
+| **replication** | Replication materials link | `{https://osf.io/k97xh}`                  |
+| **selected**    | Mark as featured           | `{true}`                                  |
 
 ### Category Values (CRITICAL)
 
@@ -276,16 +284,18 @@ Copy and paste this template into `papers.bib`:
 **Format:** `LastName, FirstName`
 
 ✅ **Correct:**
+
 ```bibtex
 author={Liu, Jiaying and Mi, Ranran Z. and Yang, Sijia}
 ```
 
 ❌ **Wrong:**
+
 ```bibtex
 author={Jiaying Liu and Ranran Z. Mi and Sijia Yang}
 ```
 
-**Multiple authors:** Separate with ` and ` (spaces before and after)
+**Multiple authors:** Separate with `and` (spaces before and after)
 
 **Middle initials:** Include them: `Mi, Ranran Z.`
 
@@ -294,18 +304,21 @@ author={Jiaying Liu and Ranran Z. Mi and Sijia Yang}
 **Must match author format exactly!**
 
 ✅ **Correct:**
+
 ```bibtex
 author={Liu, Jiaying and Yang, Sijia}
 corresponding={Yang, Sijia}
 ```
 
 ❌ **Wrong:**
+
 ```bibtex
 author={Liu, Jiaying and Yang, Sijia}
 corresponding={Sijia Yang}    % Wrong format!
 ```
 
 **Multiple corresponding authors:**
+
 ```bibtex
 corresponding={Yang, Sijia and Cascio, Christopher N.}
 ```
@@ -347,11 +360,11 @@ sijiayangcamer.github.io/
 
 **File naming conventions:**
 
-| File Type | Location | Naming | Example |
-|-----------|----------|--------|---------|
-| BibTeX entry | `_bibliography/papers.bib` | `firstauthorYEARkeyword` | `liu2025eyetracking` |
-| PDF | `assets/pdf/` | `{bibtex_key}.pdf` | `liu2025eyetracking.pdf` |
-| Preview image | `assets/img/publication_preview/` | `lastname_year_keyword.png` | `liu_2025_visual.png` |
+| File Type     | Location                          | Naming                      | Example                  |
+| ------------- | --------------------------------- | --------------------------- | ------------------------ |
+| BibTeX entry  | `_bibliography/papers.bib`        | `firstauthorYEARkeyword`    | `liu2025eyetracking`     |
+| PDF           | `assets/pdf/`                     | `{bibtex_key}.pdf`          | `liu2025eyetracking.pdf` |
+| Preview image | `assets/img/publication_preview/` | `lastname_year_keyword.png` | `liu_2025_visual.png`    |
 
 ---
 
@@ -377,11 +390,11 @@ Configuration file: _config.yml
 
 ### Common Build Errors
 
-| Error Message | Likely Cause | Solution |
-|---------------|--------------|----------|
-| "Liquid Exception: undefined method" | BibTeX syntax error | Check for unmatched braces `{}` |
-| "Could not read file" | Missing PDF or image | Verify file exists and path is correct |
-| "Invalid date" | Year format wrong | Use 4-digit year: `{2025}` not `{25}` |
+| Error Message                        | Likely Cause         | Solution                               |
+| ------------------------------------ | -------------------- | -------------------------------------- |
+| "Liquid Exception: undefined method" | BibTeX syntax error  | Check for unmatched braces `{}`        |
+| "Could not read file"                | Missing PDF or image | Verify file exists and path is correct |
+| "Invalid date"                       | Year format wrong    | Use 4-digit year: `{2025}` not `{25}`  |
 
 ---
 
@@ -399,7 +412,7 @@ Open `_site/publications/index.html` in a browser and check:
   - [ ] Translational Communication Interventions (if `category={translational}`)
 - [ ] **Title** is correct
 - [ ] All **authors** are listed
-- [ ] **Corresponding author(s) have asterisk (*)** ← **CRITICAL CHECK**
+- [ ] **Corresponding author(s) have asterisk (\*)** ← **CRITICAL CHECK**
 - [ ] **Journal/conference name** is correct
 - [ ] **Year** is correct
 - [ ] **Abstract** is visible and complete below the entry
@@ -413,7 +426,7 @@ Open `_site/publications/index.html` in a browser and check:
 Open `_site/index.html` in a browser and check:
 
 - [ ] Publication appears in **"Recent Publications"** section (if one of 5 most recent)
-- [ ] **Corresponding author has asterisk (*)** ← **CRITICAL CHECK**
+- [ ] **Corresponding author has asterisk (\*)** ← **CRITICAL CHECK**
 - [ ] **Title** displays correctly
 - [ ] **Authors** display correctly
 - [ ] **Journal name** displays correctly
@@ -421,13 +434,13 @@ Open `_site/index.html` in a browser and check:
 
 ### Common Issues Quick Check
 
-| Issue | Check This |
-|-------|------------|
-| ❌ No asterisk on corresponding author | `corresponding={Last, First}` matches author format exactly |
+| Issue                                   | Check This                                                             |
+| --------------------------------------- | ---------------------------------------------------------------------- |
+| ❌ No asterisk on corresponding author  | `corresponding={Last, First}` matches author format exactly            |
 | ❌ Publication not in research area tab | `category={morality}`, `{artificial}`, or `{translational}` is present |
-| ❌ PDF link broken | PDF filename matches BibTeX key exactly (case-sensitive) |
-| ❌ Preview image not showing | Image filename in `preview={...}` matches file in directory |
-| ❌ Publication not appearing at all | Check BibTeX syntax (matched braces, commas) |
+| ❌ PDF link broken                      | PDF filename matches BibTeX key exactly (case-sensitive)               |
+| ❌ Preview image not showing            | Image filename in `preview={...}` matches file in directory            |
+| ❌ Publication not appearing at all     | Check BibTeX syntax (matched braces, commas)                           |
 
 ---
 
@@ -435,19 +448,21 @@ Open `_site/index.html` in a browser and check:
 
 ### Problem 1: Corresponding Author Asterisk Not Appearing
 
-**Symptoms:** The corresponding author's name appears but without an asterisk (*)
+**Symptoms:** The corresponding author's name appears but without an asterisk (\*)
 
 **This is the #1 most common issue!**
 
 **Cause 1: Format mismatch**
 
 ❌ **Wrong:**
+
 ```bibtex
 author={Liu, Jiaying and Yang, Sijia}
 corresponding={Sijia Yang}    % First Last format
 ```
 
 ✅ **Correct:**
+
 ```bibtex
 author={Liu, Jiaying and Yang, Sijia}
 corresponding={Yang, Sijia}    % Last, First format
@@ -458,6 +473,7 @@ corresponding={Yang, Sijia}    % Last, First format
 If author is listed as `Yang, S.`, corresponding must also be `Yang, S.` (not `Yang, Sijia`)
 
 Check for:
+
 - Extra spaces
 - Middle initials
 - Spelling differences
@@ -467,7 +483,7 @@ Check for:
 ❌ **Wrong:** `corresponding={Yang, Sijia, Smith, John}`
 ✅ **Correct:** `corresponding={Yang, Sijia and Smith, John}`
 
-Use ` and ` to separate (with spaces)
+Use `and` to separate (with spaces)
 
 ### Problem 2: Publication Not in Research Area Tab
 
@@ -522,6 +538,7 @@ category={translational},  % Translational Communication Interventions
 
 2. **Missing commas**
    - Each field except the last must end with a comma
+
    ```bibtex
    title={My Title},     % comma required
    author={Smith, John}, % comma required
@@ -532,13 +549,14 @@ category={translational},  % Translational Communication Interventions
    - Use LaTeX escaping:
      - `\&` for &
      - `\%` for %
-     - `\_` for _
+     - `\_` for \_
 
 4. **Smart quotes**
    - Don't copy from Word/Google Docs
    - Use straight quotes: `"` not `"` or `"`
 
 **How to find the error:**
+
 1. Look at the error message for line number
 2. Check that line and surrounding lines for syntax issues
 3. Use a text editor with brace matching
@@ -563,13 +581,13 @@ category={translational},  % Translational Communication Interventions
 
 ## Printable Checklist
 
-**Publication Title:** _________________________________
+**Publication Title:** ****************\_****************
 
-**First Author:** _________________________________
+**First Author:** ****************\_****************
 
-**BibTeX Key:** _________________________________
+**BibTeX Key:** ****************\_****************
 
-**Date Added:** _________________________________
+**Date Added:** ****************\_****************
 
 ---
 
@@ -613,10 +631,12 @@ category={translational},  % Translational Communication Interventions
 ### Build & Verification
 
 - [ ] **Site rebuilt successfully**
+
   ```bash
   cd /Users/sijiayang/Documents/sijiayangcamer.github.io
   bundle exec jekyll build
   ```
+
   - [ ] No error messages
   - [ ] Build completed ("done in X seconds")
 
@@ -626,7 +646,7 @@ category={translational},  % Translational Communication Interventions
   - [ ] Publication appears under correct research area tab
   - [ ] Title correct
   - [ ] All authors listed
-  - [ ] Corresponding author has asterisk (*) ← **CHECK CAREFULLY**
+  - [ ] Corresponding author has asterisk (\*) ← **CHECK CAREFULLY**
   - [ ] Journal/conference name correct
   - [ ] Year correct
   - [ ] Abstract visible and complete
@@ -637,7 +657,7 @@ category={translational},  % Translational Communication Interventions
 
 - [ ] **Homepage verified** (`_site/index.html`)
   - [ ] Publication in "Recent Publications" (if one of 5 most recent)
-  - [ ] Corresponding author has asterisk (*) ← **CHECK CAREFULLY**
+  - [ ] Corresponding author has asterisk (\*) ← **CHECK CAREFULLY**
   - [ ] Title displays correctly
   - [ ] Authors display correctly
   - [ ] Journal name displays correctly
@@ -648,14 +668,17 @@ category={translational},  % Translational Communication Interventions
 - [ ] All checks passed
 - [ ] Ready for deployment
 
-**Checked by:** _________________________________
+**Checked by:** ****************\_****************
 
-**Date:** _________________________________
+**Date:** ****************\_****************
 
 **Notes/Issues:**
-_______________________________________________________________
-_______________________________________________________________
-_______________________________________________________________
+
+---
+
+---
+
+---
 
 ---
 
@@ -685,12 +708,12 @@ preview={lastname_year_keyword.png}    % Can use different naming
 
 ### File Locations
 
-| What | Where |
-|------|-------|
-| BibTeX entries | `_bibliography/papers.bib` |
-| PDF files | `assets/pdf/` |
-| Preview images | `assets/img/publication_preview/` |
-| Check results | `_site/publications/index.html` and `_site/index.html` |
+| What           | Where                                                  |
+| -------------- | ------------------------------------------------------ |
+| BibTeX entries | `_bibliography/papers.bib`                             |
+| PDF files      | `assets/pdf/`                                          |
+| Preview images | `assets/img/publication_preview/`                      |
+| Check results  | `_site/publications/index.html` and `_site/index.html` |
 
 ### Build Command
 
@@ -701,11 +724,11 @@ bundle exec jekyll build
 
 ### File Naming
 
-| Type | Format | Example |
-|------|--------|---------|
-| BibTeX key | `firstauthorYEARkeyword` | `liu2025eyetracking` |
-| PDF filename | `{bibtex_key}.pdf` | `liu2025eyetracking.pdf` |
-| Preview image | `lastname_year_keyword.png` | `liu_2025_visual.png` |
+| Type          | Format                      | Example                  |
+| ------------- | --------------------------- | ------------------------ |
+| BibTeX key    | `firstauthorYEARkeyword`    | `liu2025eyetracking`     |
+| PDF filename  | `{bibtex_key}.pdf`          | `liu2025eyetracking.pdf` |
+| Preview image | `lastname_year_keyword.png` | `liu_2025_visual.png`    |
 
 ### Most Common Mistakes
 
@@ -752,9 +775,11 @@ This automatically hyperlinks names in all publications to their profile pages.
 ## Contact & Support
 
 **Need help?**
+
 - Sijia Yang (Lab PI): sijia.yang@wisc.edu
 
 **Maintenance scripts:**
+
 - Verify BibTeX against PDFs: `_scripts/verify_bib_against_pdfs.py`
 - Compare with Zotero: `_scripts/detailed_comparison_fixed.py`
 

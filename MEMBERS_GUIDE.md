@@ -31,7 +31,7 @@ graduate_students:
     photo: "members/jane_doe.jpg"
     email: "janedoe@wisc.edu"
     projects:
-      - moral_messaging  # Must match project file name in _projects/
+      - moral_messaging # Must match project file name in _projects/
       - health_intervention
     links:
       cv: "/assets/pdf/members/jane_doe_cv.pdf"
@@ -65,7 +65,7 @@ alumni:
   - name: "Alice Johnson"
     photo: "members/alice_johnson.jpg"
     current_position: "Assistant Professor, University of Example"
-    email: "alice@example.edu"  # Optional
+    email: "alice@example.edu" # Optional
     website: "https://alicejohnson.com"
 ```
 
@@ -75,32 +75,32 @@ alumni:
 
 ### Required Fields
 
-| Field | Description | Example |
-|-------|-------------|---------|
-| `name` | Full name | "Jane Doe" |
+| Field   | Description   | Example                |
+| ------- | ------------- | ---------------------- |
+| `name`  | Full name     | "Jane Doe"             |
 | `photo` | Path to photo | "members/jane_doe.jpg" |
-| `email` | Email address | "janedoe@wisc.edu" |
+| `email` | Email address | "janedoe@wisc.edu"     |
 
 ### Optional Fields (Graduate/Undergraduate)
 
-| Field | Description | Example |
-|-------|-------------|---------|
-| `projects` | List of project slugs | `- project_name` |
-| `links.cv` | Path to CV PDF | "/assets/pdf/members/name_cv.pdf" |
-| `links.website` | Personal website | "https://example.com" |
-| `links.google_scholar` | Google Scholar profile | "https://scholar.google.com/..." |
-| `links.github` | GitHub profile | "https://github.com/username" |
-| `links.osf` | OSF profile | "https://osf.io/xxxxx/" |
-| `links.linkedin` | LinkedIn profile | "https://linkedin.com/in/username" |
-| `links.twitter` | Twitter/X profile | "https://twitter.com/username" |
+| Field                  | Description            | Example                            |
+| ---------------------- | ---------------------- | ---------------------------------- |
+| `projects`             | List of project slugs  | `- project_name`                   |
+| `links.cv`             | Path to CV PDF         | "/assets/pdf/members/name_cv.pdf"  |
+| `links.website`        | Personal website       | "https://example.com"              |
+| `links.google_scholar` | Google Scholar profile | "https://scholar.google.com/..."   |
+| `links.github`         | GitHub profile         | "https://github.com/username"      |
+| `links.osf`            | OSF profile            | "https://osf.io/xxxxx/"            |
+| `links.linkedin`       | LinkedIn profile       | "https://linkedin.com/in/username" |
+| `links.twitter`        | Twitter/X profile      | "https://twitter.com/username"     |
 
 ### Optional Fields (Alumni)
 
-| Field | Description | Example |
-|-------|-------------|---------|
+| Field              | Description                       | Example                           |
+| ------------------ | --------------------------------- | --------------------------------- |
 | `current_position` | Current job title and institution | "Assistant Professor, UW-Madison" |
-| `email` | Email address | "alice@example.edu" |
-| `website` | Personal website | "https://example.com" |
+| `email`            | Email address                     | "alice@example.edu"               |
+| `website`          | Personal website                  | "https://example.com"             |
 
 ---
 
@@ -118,6 +118,7 @@ The system automatically matches member names with publications in `_bibliograph
 ### Name Matching
 
 The system tries multiple formats:
+
 - "Jane Doe" matches "Jane Doe" or "Doe, Jane"
 - First name + Last name combinations
 - Case-insensitive matching
@@ -125,17 +126,20 @@ The system tries multiple formats:
 ### Requirements
 
 For auto-population to work:
+
 - Member name must match exactly how it appears in `papers.bib`
 - Name format in BibTeX: `author={Last, First and ...}` or `author={First Last and ...}`
 
 ### Example
 
 **In members.yml**:
+
 ```yaml
 - name: "Jane Doe"
 ```
 
 **In papers.bib**:
+
 ```bibtex
 @article{doe2024paper,
   author={Doe, Jane and Smith, John},  ← Will match!
@@ -157,6 +161,7 @@ The `projects` field links members to research projects.
 **Format**: Use the project file name without extension
 
 **Example**:
+
 - Project file: `_projects/moral_messaging.md`
 - In members.yml: `- moral_messaging`
 
@@ -181,15 +186,15 @@ The `slug` should match the filename.
 
 ### Available Icons
 
-| Link Type | Icon | Icon Code |
-|-----------|------|-----------|
-| CV | "cv" text | N/A (styled text) |
-| Website | 🔗 | `fas fa-link` |
-| Google Scholar | 🎓 | `ai ai-google-scholar` |
-| GitHub | 🐙 | `fab fa-github` |
-| OSF | 📊 | `ai ai-osf` |
-| LinkedIn | 💼 | `fab fa-linkedin` |
-| Twitter/X | 🐦 | `fab fa-x-twitter` |
+| Link Type      | Icon      | Icon Code              |
+| -------------- | --------- | ---------------------- |
+| CV             | "cv" text | N/A (styled text)      |
+| Website        | 🔗        | `fas fa-link`          |
+| Google Scholar | 🎓        | `ai ai-google-scholar` |
+| GitHub         | 🐙        | `fab fa-github`        |
+| OSF            | 📊        | `ai ai-osf`            |
+| LinkedIn       | 💼        | `fab fa-linkedin`      |
+| Twitter/X      | 🐦        | `fab fa-x-twitter`     |
 
 ### Styling
 
@@ -267,7 +272,7 @@ The `slug` should match the filename.
      - name: "Firstname Lastname"
        photo: "members/firstname_lastname.jpg"
        current_position: "Job Title, Institution"
-       email: "new@email.com"  # Optional
+       email: "new@email.com" # Optional
        website: "https://..."
    ```
 4. Remove from original section
@@ -301,6 +306,7 @@ Publications auto-update from `papers.bib`. To add new publications:
 **Problem**: Member's publications don't show up automatically
 
 **Solutions**:
+
 1. Check name spelling matches exactly in both files
 2. Verify name format in papers.bib: `Doe, Jane` or `Jane Doe`
 3. Check that author field in BibTeX is correct
@@ -311,6 +317,7 @@ Publications auto-update from `papers.bib`. To add new publications:
 **Problem**: Project tag shows but doesn't link
 
 **Solutions**:
+
 1. Check project file exists: `_projects/project_slug.md`
 2. Verify slug matches filename exactly
 3. Ensure project has proper frontmatter
@@ -320,6 +327,7 @@ Publications auto-update from `papers.bib`. To add new publications:
 **Problem**: Placeholder icon shows instead of photo
 
 **Solutions**:
+
 1. Check photo path in members.yml: `members/filename.jpg`
 2. Verify photo exists in `/assets/img/members/`
 3. Check filename spelling and case sensitivity
@@ -330,6 +338,7 @@ Publications auto-update from `papers.bib`. To add new publications:
 **Problem**: Link icons missing or broken
 
 **Solutions**:
+
 1. Verify icon fonts loaded (Font Awesome, Academicons)
 2. Check URL format is correct (full URL with https://)
 3. Ensure proper indentation in YAML
@@ -344,6 +353,7 @@ Member card styles are in `_sass/_base.scss` under "People/Members Page Styles".
 ### Common Customizations
 
 **Change grid columns**:
+
 ```scss
 .members-grid {
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); // Adjust 280px
@@ -351,14 +361,16 @@ Member card styles are in `_sass/_base.scss` under "People/Members Page Styles".
 ```
 
 **Change photo size**:
+
 ```scss
 .member-photo-container {
-  width: 180px;  // Adjust
+  width: 180px; // Adjust
   height: 180px; // Adjust
 }
 ```
 
 **Change card hover effect**:
+
 ```scss
 .member-card {
   &:hover {
@@ -399,6 +411,7 @@ Member card styles are in `_sass/_base.scss` under "People/Members Page Styles".
 ## Best Practices
 
 ✅ **DO**:
+
 - Use square photos (1:1 ratio)
 - Keep photo file sizes reasonable (< 500KB)
 - Use consistent naming (lowercase, underscores)
@@ -407,6 +420,7 @@ Member card styles are in `_sass/_base.scss` under "People/Members Page Styles".
 - Preview locally before committing
 
 ❌ **DON'T**:
+
 - Use non-square photos (will be cropped)
 - Forget to add photo to `/assets/img/members/`
 - Use special characters in filenames
