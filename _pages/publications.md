@@ -13,19 +13,24 @@ nav_order: 4
 .category-tabs {
   margin: 2rem 0;
   border-bottom: 2px solid #dee2e6;
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .category-tabs .nav-item {
   margin-bottom: -2px;
+  flex-shrink: 0;
 }
 
 .category-tabs .nav-link {
   border: none;
   border-bottom: 3px solid transparent;
   color: #6c757d;
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-size: 0.95rem;
+  white-space: nowrap;
 }
 
 .category-tabs .nav-link:hover {
@@ -87,6 +92,14 @@ nav_order: 4
 /* Hide the Abs button since abstracts are always shown */
 .abstract.btn {
   display: none !important;
+}
+
+/* Style for publication counts in tabs */
+.nav-link .count {
+  font-size: 0.85em;
+  opacity: 0.7;
+  font-weight: 400;
+  margin-left: 0.25rem;
 }
 </style>
 
@@ -197,6 +210,47 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Initially show all publications
   publications.forEach(pub => pub.classList.add('visible'));
+
+  // Function to count publications by category and update tab labels
+  function updateTabCounts() {
+    const counts = {
+      all: publications.length,
+      morality: 0,
+      artificial: 0,
+      translational: 0
+    };
+
+    // Count publications in each category
+    publications.forEach(pub => {
+      const category = pub.getAttribute('data-pub-category');
+      if (category && counts.hasOwnProperty(category)) {
+        counts[category]++;
+      }
+    });
+
+    // Update each tab with its count
+    tabs.forEach(tab => {
+      const category = tab.getAttribute('data-category');
+      const count = counts[category];
+
+      // Remove existing count span if present
+      const existingCount = tab.querySelector('.count');
+      if (existingCount) {
+        existingCount.remove();
+      }
+
+      // Add count to tab label
+      if (count !== undefined) {
+        const countSpan = document.createElement('span');
+        countSpan.className = 'count';
+        countSpan.textContent = `(${count})`;
+        tab.appendChild(countSpan);
+      }
+    });
+  }
+
+  // Update tab counts
+  updateTabCounts();
 
   // Update year headers after a brief delay to ensure DOM is ready
   setTimeout(updateYearHeaders, 100);

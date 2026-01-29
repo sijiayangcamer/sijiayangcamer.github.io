@@ -2,7 +2,7 @@
 layout: home
 title: CAMER
 permalink: /
-subtitle: Communication, AI, Morality, and Effects Research Group
+subtitle: <strong>C</strong>omputational Communication, <strong>A</strong>I, <strong>M</strong>orality, and <strong>E</strong>ffects <strong>R</strong>esearch
 ---
 
 ## what we do
