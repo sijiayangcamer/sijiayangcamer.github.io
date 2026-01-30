@@ -2,7 +2,7 @@
 layout: home
 title: CAMER
 permalink: /
-subtitle: <strong>C</strong>omputational Communication, <strong>A</strong>I, <strong>M</strong>orality, and <strong>E</strong>ffects <strong>R</strong>esearch
+subtitle: Computational Communication, AI, Morality, and Effects Research
 ---
 
 ## what we do
